@@ -8,7 +8,7 @@ const useFetching = (updateState) => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts?_limit=15")
       .then((res) => dispatch(updateState(res.data)));
-  });
+  }, []);
 };
 
 export default useFetching;
